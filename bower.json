@@ -1,0 +1,14 @@
+{
+  "name": "m945popcorn",
+  "version": "0.0.0",
+  "dependencies": {
+    "bootstrap": "~3.0.0-rc1",
+    "modernizr": "~2.6.2",
+    "jquery": "~1.9.1",
+    "popcorn-js": "~1.5.11"
+  },
+  "devDependencies": {
+    "chai": "~3.4.2",
+    "mocha": "~2.3.4"
+  }
+}
