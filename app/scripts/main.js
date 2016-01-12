@@ -1,20 +1,20 @@
 
 var ranges = [
         {
-            "sec": 3,  // rewind
-            "slide": 0
+            "sec": 2,  // rewind
+            "slide": "hashtag-rewind-2015"
         },
         {
-            "sec": 8, // charlie hebdo
-            "slide": 1
+            "sec": 8,
+            "slide": "je-suis-charlie"
         },
         {
             "sec": 47, // TheDress
-            "slide": 4
+            "slide": "thedress"
         },
         {
             "sec": 83, // thug Life
-            "slide": 2
+            "slide": "thug-life"
         },
         {
             "sec": 132, // marty mc fly zukunf
@@ -22,51 +22,51 @@ var ranges = [
         },
         {
             "sec": 150, // left shark
-            "slide": 3
+            "slide": "super-bowl-shark"
         },
         {
             "sec": 172, // netflix and chill
-            "slide": 8
+            "slide": "netflix-and-chill"
         },
         {
             "sec": 215, // same sex marriage
-            "slide": 12
+            "slide": "same-sex-marriage-in-den-usa"
         },
         {
             "sec": 253, // just do it
-            "slide": 8
+            "slide": "just-do-it"
         },
         {
             "sec": 290, // saturo iwata
-            "slide":10
+            "slide": "tod-von-iwata-saturo"
         },
         {
             "sec": 323, // donal trump
-            "slide": 11
+            "slide": "donald-trump"
         },
         {
             "sec": 384, // oh no its ratarded
-            "slide": 14
+            "slide": "oh-no-its-retarded"
         },
         {
             "sec": 402, // john cena
-            "slide": 15
+            "slide": "unexpected-john-cena"
         },
         {
             "sec": 468, // confused travolta / vincent vega
-            "slide": 18
+            "slide": "vincent-vega"
         },
         {
             "sec": 519, // hotline bling
-            "slide": 13
+            "slide": "hotline-bling"
         },
         {
             "sec": 551 , // #prayforparis
-            "slide": 20
+            "slide": "prayforparis"
         },
         {
             "sec": 567, // linda
-            "slide": 21
+            "slide": "linda-vs-isis"
         },
         {
             "sec": 586, // TODO steve harvey
@@ -74,11 +74,11 @@ var ranges = [
         },
         {
             "sec": 636, // starwars
-            "slide": 22
+            "slide": "star-wars-the-spoiler-awakens"
         },
         {
             "sec": 657, // rewind
-            "slide": 0
+            "slide": "hashtag-rewind-2015"
         }
     ];
 
@@ -90,8 +90,8 @@ $(document).ready(function () {
 
 
  var options = {
-  //  hash_bookmark: true,
-    initial_zoom: 3,
+    hash_bookmark: true,
+    initial_zoom: 1,
     timenav_position: "top",
     start_at_end: true
   }
@@ -112,19 +112,23 @@ $(document).ready(function () {
     updatePosition(popcorn);
   });
 
+  timeline._onSlideChange( function (e) {
+    console.log("log");
+  });
+
   for (var i = 0;i < ranges.length; i++ ) {
     bindEvent(ranges[i].sec, ranges[i].slide);
   }
 
 
     // goTo last slide
-  timeline.goTo(26);
+  timeline.goToEnd();
 
 
 
 function bindEvent(time, slide) {
     popcorn.cue(time, function () {
-        timeline.goTo(slide);
+        timeline.goToId(slide);
     });
 }
 
@@ -132,7 +136,7 @@ function updatePosition(popcorn_obj) {
  popcorn_obj.audio.currentTime;
   for (var i = 0;i < ranges.length -1; i++ ) {
     if (ranges[i + 1].sec >= popcorn_obj.audio.currentTime){
-      timeline.goTo(ranges[i].slide);
+      timeline.goToId(ranges[i].slide);
       return;
     }
   }
