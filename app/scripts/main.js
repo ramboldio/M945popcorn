@@ -91,7 +91,7 @@ $(document).ready(function () {
 
  var options = {
     initial_zoom: 1,
-    timenav_position: "bottom",
+    timenav_position: "top",
     start_at_end: true
   }
   var timeline = new TL.Timeline('timeline-embed',
