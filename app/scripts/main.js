@@ -102,7 +102,6 @@ $(document).ready(function () {
   m945adj();
 
   popcorn.on('play', function () {
-  $(".tl-message-full").hide();
     this.off('play');
     updatePosition(popcorn);
   });
@@ -111,8 +110,10 @@ $(document).ready(function () {
     updatePosition(popcorn);
   });
 
-  timeline._onSlideChange( function (e) {
-    console.log("log");
+  $('.playbutton').on('click', function () {
+    popcorn.play();
+    $(this).hide('fast');
+    $('.backwards').show('fast').pulse({times: 8, duration: 500});
   });
 
   for (var i = 0;i < ranges.length; i++ ) {
@@ -145,5 +146,23 @@ function m945adj() {
   $('div#col-right').hide();
   $('div#col-left, div#col-left > .detail').css('width: 100%;');
 }
+$.fn.pulse = function(options) {
+
+    var options = $.extend({
+        times: 3,
+        duration: 1000
+    }, options);
+
+    var period = function(callback) {
+        $(this).animate({opacity: 0}, options.duration, function() {
+            $(this).animate({opacity: 1}, options.duration, callback);
+        });
+    };
+    return this.each(function() {
+        var i = +options.times, self = this,
+        repeat = function() { --i && period.call(self, repeat) };
+        period.call(this, repeat);
+    });
+};
 
 });

@@ -13,12 +13,22 @@
   <style>
   audio {
     width: 100%;
+    margin: 20px;
   }
   .container {
     width: 960px;
   }
-  .tl-attribution {
+  .tl-attribution, .tl-message-full {
+    display: none !important;
+  }
+  .backwards {
     display: none;
+  }
+  .full-width {
+    width: 100%;
+  }
+  .playbutton {
+    cursor: pointer;
   }
   </style>
   <link title="timeline-styles" rel="stylesheet" href="//cdn.knightlab.com/libs/timeline3/latest/css/timeline.css">
@@ -30,5 +40,6 @@
   </div>
   <script src="//cdn.knightlab.com/libs/timeline3/latest/js/timeline.js"></script>
   <script src="scripts/main.js"></script>
+
 </body>
 </html>
