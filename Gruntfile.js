@@ -285,8 +285,8 @@ module.exports = function (grunt) {
     'uglify',
     'copy',
  //   'rev',
-    'usemin',
-    'build_gh_pages'
+    'usemin'
+//    'build_gh_pages'
   ]);
 
   grunt.registerTask('default', [
