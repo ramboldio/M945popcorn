@@ -241,7 +241,12 @@ module.exports = function (grunt) {
         'svgmin',
         'htmlmin'
       ]
-    }
+    },
+      buildGhPages: {
+            ghPages: {
+
+            }
+        }
   });
 
   grunt.renameTask('regarde', 'watch');
@@ -280,7 +285,8 @@ module.exports = function (grunt) {
     'uglify',
     'copy',
  //   'rev',
-    'usemin'
+    'usemin',
+    'build_gh_pages'
   ]);
 
   grunt.registerTask('default', [
