@@ -5,7 +5,7 @@ var ranges = [
             "slide": "hashtag-rewind-2015"
         },
         {
-            "sec": 8,
+            "sec": 22,
             "slide": "je-suis-charlie"
         },
         {
