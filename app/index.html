@@ -13,7 +13,7 @@
   <style>
   audio {
     width: 100%;
-    margin: 20px;
+    margin: 0;
   }
   .container {
     width: 960px;
@@ -30,13 +30,16 @@
   .playbutton {
     cursor: pointer;
   }
+  .backwards, .playbutton {
+    height: 500px;
+  }
   </style>
   <link title="timeline-styles" rel="stylesheet" href="//cdn.knightlab.com/libs/timeline3/latest/css/timeline.css">
 </head>
 <body>
   <div class="container">
     <audio controls id="audio"  src="http://mediathek.m945.de/wp-content/uploads/2016/01/Hashtag-Rewind.mp3?_=1"><source type="audio/mpeg" src="http://mediathek.m945.de/wp-content/uploads/2016/01/Hashtag-Rewind.mp3?_=1"><a href="http://mediathek.m945.de/wp-content/uploads/2016/01/Hashtag-Rewind.mp3?_=1">http://mediathek.m945.de/wp-content/uploads/2016/01/Hashtag-Rewind.mp3?_=1</a></audio>
-    <div id="timeline-embed" style="height: 1000px;"></div>
+    <div id="timeline-embed" style="height: 800px;"></div>
   </div>
   <script src="//cdn.knightlab.com/libs/timeline3/latest/js/timeline.js"></script>
   <!-- build:js scripts/main.js -->
