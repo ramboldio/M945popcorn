@@ -18,7 +18,7 @@ var ranges = [
         },
         {
             "sec": 132, // marty mc fly zukunf
-            "slide": 3
+            "slide": "back-to-the-present"
         },
         {
             "sec": 150, // left shark
@@ -70,7 +70,7 @@ var ranges = [
         },
         {
             "sec": 586, // TODO steve harvey
-            "slide": 18
+            "slide": "steve-harvey"
         },
         {
             "sec": 636, // starwars
