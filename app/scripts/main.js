@@ -90,7 +90,6 @@ $(document).ready(function () {
 
 
  var options = {
-    hash_bookmark: true,
     initial_zoom: 1,
     timenav_position: "top",
     start_at_end: true
