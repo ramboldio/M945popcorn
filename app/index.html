@@ -13,10 +13,13 @@
   <style>
   audio {
     width: 100%;
-    margin: 0;
+    margin: 20px 0;
   }
   .container {
     width: 960px;
+    float: left;
+    position: relative;
+    left: -170px;
   }
   .tl-attribution, .tl-message-full {
     display: none !important;
@@ -35,10 +38,10 @@
   }
 
 
-  .imglist, div#col-right  {
+ div#col-right  {
   display: none;
 }
-div#col-left, div#col-left > div, div#col-left > div > div {
+div#col-left, div#col-left > div, div#col-left > div > .container {
 width: 100%;
 }
 
@@ -47,8 +50,18 @@ width: 100%;
 </head>
 <body>
   <div class="container">
+
+  <p>Je suis Paris, Gay Marriage und Netflix and Chill. So hießen einige der wichtigsten Netztrends des Jahres. Hashtags wurden verbreitet, Profilfotos geändert und Großeltern wollten wissen wie dieses Twitter funktioniert.</p>
+  <p>Die Online Redaktion von M94.5 hat sich daran gemacht und die wichtigsten Hashtags und die lustigsten Videos des Jahres 2015 zusammengefasst. Hört euch hier unseren Jahresrückblick als Podcast an.</p>
+
+  <hr>
+
     <audio controls id="audio"  src="http://mediathek.m945.de/wp-content/uploads/2016/01/Hashtag-Rewind.mp3?_=1"><source type="audio/mpeg" src="http://mediathek.m945.de/wp-content/uploads/2016/01/Hashtag-Rewind.mp3?_=1"><a href="http://mediathek.m945.de/wp-content/uploads/2016/01/Hashtag-Rewind.mp3?_=1">http://mediathek.m945.de/wp-content/uploads/2016/01/Hashtag-Rewind.mp3?_=1</a></audio>
+
+  <hr>
+
     <div id="timeline-embed" style="height: 800px;"></div>
+
   </div>
   <script src="//cdn.knightlab.com/libs/timeline3/latest/js/timeline.js"></script>
   <!-- build:js scripts/main.js -->
